@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Forms Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bolder;
+        }
+
+        .art-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .art-section {
+            width: 45%; /* Adjust the width for better spacing */
+            box-sizing: border-box;
+            text-align: center;
+            margin: 10px;
+            cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+        }
+
+        .art-section:hover {
+            opacity: 0.8; /* Add a hover effect for better user experience */
+        }
+
+        .art-name {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Various Art Forms
+</header>
+
+<div class="art-container">
+    <div class="art-section" id="kalamkariSection">
+        <img width="400" height="300" src="https://media.licdn.com/dms/image/C5112AQGOCFn1Y64-cg/article-cover_image-shrink_600_2000/0/1579883488802?e=2147483647&v=beta&t=nAp28jUcSPiaAXD3Xlg4B7cmX0u3pziXaATn19ishyQ" alt="Artwork 2">
+        <p class="art-name" style="font-style: italic;">Kalamkari </p>
+    </div>
+    <div class="art-section">
+        <img width="400" height="300" src="https://i.pinimg.com/564x/dd/32/32/dd3232530c52f35e51e8159653872f2c.jpg" alt="Artwork 1">
+        <p class="art-name">Maggam Work</p>
+    </div>
+    <div class="art-section">
+        <img width="400" height="300" src= "https://i.pinimg.com/736x/d7/69/6f/d7696f86f0d4c0f240d667a7051ac1db.jpg" alt="Artwork 3">
+        <p class="art-name">Kondapalli Handicrafts</p>
+    </div>
+    <div class="art-section">
+        <img width="400" height="300" src="C:/Users/harik/OneDrive/Desktop/GDSC/images/dokraart.jpg" alt="Artwork 4">
+        <p class="Dhokra Art">Dhokra Art</p>
+    </div>
+</div>
+
+<script>
+    // Add click event listener to Kalamkari image
+    document.getElementById('kalamkariSection').addEventListener('click', function() {
+        window.location.href = "C:/Users/harik/OneDrive/Desktop/GDSC/Artisians.html"; // Replace with your actual URL
+    });
+</script>
+
+</body>
+</html>

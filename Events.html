@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    /* Style for the darker and bolder numbers */
+    .highlight {
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Calendar</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Sun</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+      </tr>
+    </thead>
+    <tbody id="calendar-body">
+      <!-- Calendar content will be added here dynamically using JavaScript -->
+    </tbody>
+  </table>
+
+  <script>
+    // Function to generate calendar content dynamically
+    function generateCalendar() {
+      // Get the reference to the calendar body
+      var calendarBody = document.getElementById('calendar-body');
+
+      // Clear existing content
+      calendarBody.innerHTML = '';
+
+      // Get the current date
+      var currentDate = new Date();
+
+      // Set the date to the 1st of the current month
+      currentDate.setDate(1);
+
+      // Loop through each day of the month
+      while (currentDate.getMonth() === new Date().getMonth()) {
+        // Create a new row for the dates
+        var row = calendarBody.insertRow();
+
+        // Loop through each day of the week
+        for (var i = 0; i < 7; i++) {
+          // Add a cell for the current date
+          var cell = row.insertCell();
+          var date = currentDate.getDate();
+
+          // Check if the date is 23 or 28
+          if (date === 23 || date === 28) {
+            // Create a button for the special dates
+            var button = document.createElement('button');
+            button.textContent = date;
+            button.classList.add('highlight');
+
+            // Add a click event listener to the button
+            button.addEventListener('click', createClickHandler(date));
+
+            // Append the button to the cell
+            cell.appendChild(button);
+          } else {
+            // Add a cell for the regular dates
+            cell.textContent = date;
+          }
+
+          // Move to the next day
+          currentDate.setDate(currentDate.getDate() + 1);
+        }
+      }
+    }
+
+    // Function to create a click event handler
+    function createClickHandler(date) {
+      return function() {
+        if (date === 23) {
+          window.location.href = 'https://insider.in/sunday-live-w-ram-miriyala-feb4-2024/event';
+        }
+        // Add additional conditions for other dates if needed
+      };
+    }
+
+    // Call the function to generate the initial calendar
+    generateCalendar();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TravelHub</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+    }
+
+    nav {
+      background-color: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .navbar-brand {
+      font-size: 50px; /* Adjust the font size for the title */
+      font-weight: bold;
+      color: #ce0fb4;
+      font-family:'Lucida Grande';
+      font-style: italic;
+    }
+
+    .content {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    .content img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .image-container img {
+      margin-right: 20px; /* Adjust the space between images as needed */
+      margin-bottom: 20px; /* Add margin-bottom to create gaps between images */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">TravelHub</a>
+
+  <!-- Navbar Content -->
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </li>
+      <li class="nav-item">
+        
+        <!-- Update the href attribute with the desired login/signup page URL -->
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Content -->
+<div class="container content" id="scrollTarget">
+  <div class="image-container">
+    <a href="Hyderabad.html">
+      <img src="C:/Users/harik/OneDrive/Pictures/charminar.webp" width="300" height="300" alt="Charminar Image">
+    </a>
+    <img src="C:/Users/harik/OneDrive/Pictures/tahy.jpg" width="300" height="300" alt="Image 1">
+    <img src="C:/Users/harik/OneDrive/Pictures/esha foundation.webp" width="300" height="300" alt="Image 2">
+    <img src="C:/Users/harik/OneDrive/Pictures/Golden Temple.webp" width="300" height="300" alt="Image 3">
+    <img src="C:/Users/harik/OneDrive/Pictures/hampi.jpg" width="300" height="300" alt="Image 4">
+    <img src="C:/Users/harik/OneDrive/Pictures/India Gate.jpg" width="300" height="250" alt="Image 4">
+  </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Script to scroll down when the page loads -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    window.scrollTo(0, document.getElementById("scrollTarget").offsetTop);
+  });
+</script>
+
+</body>
+</html>
